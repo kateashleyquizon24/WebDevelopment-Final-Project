@@ -1,17 +1,3 @@
-/**
- * validation.js — TRAVELITRIX
- * - Watch destination cycling (Omnitrix image version)
- * - SLAM teleport animation
- * - Order form: fetch() POST to XAMPP order.php (works from any origin)
- * - Live order total calculator
- * - Navbar scroll effect
- * Web Development Fundamentals | A.Y. 2025-2026
- */
-
-/* ─────────────────────────────────────────────────────────────
-   IMPORTANT: Set this to wherever your XAMPP site is running.
-   Default XAMPP path:  http://localhost/travelitrix/order.php
-   ───────────────────────────────────────────────────────────── */
 var ORDER_PHP_URL = 'http://localhost/travelitrix/order.php';
 
 document.addEventListener('DOMContentLoaded', function () {

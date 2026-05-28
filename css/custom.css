@@ -1,6 +1,3 @@
-/* custom.css — TRAVELITRIX · Web Dev Fundamentals A.Y. 2025-2026 */
-
-/* Bootstrap CSS variable overrides */
 :root {
   --bs-primary: #00ff88;
   --bs-font-size-base: 1rem;
@@ -14,6 +11,10 @@
   --border:     rgba(0, 255, 136, 0.15);
   --text:       #c8fde4;
   --muted:      #5a8c6e;
+}
+
+p.small {
+  color: #5a8c6e;
 }
 
 /* Base */
@@ -31,6 +32,7 @@ h1, h2, h3, h4, h5 {
   font-weight: 700;
   color: #fff;
 }
+
 
 /* Navbar */
 #mainNav {

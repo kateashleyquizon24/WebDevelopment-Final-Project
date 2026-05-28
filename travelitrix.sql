@@ -1,17 +1,3 @@
--- ============================================================
---  travelitrix.sql — TRAVELITRIX Database Schema
---  Web Development Fundamentals | A.Y. 2025-2026
---
---  HOW TO USE (XAMPP):
---  1. Open phpMyAdmin → http://localhost/phpmyadmin
---  2. Click "Import" tab → Choose this file → Click "Go"
---
---  If you already imported the old version, run this instead
---  in phpMyAdmin's SQL tab:
---    DROP DATABASE IF EXISTS travelitrix;
---  Then re-import this file.
--- ============================================================
-
 CREATE DATABASE IF NOT EXISTS travelitrix
   DEFAULT CHARACTER SET utf8mb4
   DEFAULT COLLATE utf8mb4_unicode_ci;

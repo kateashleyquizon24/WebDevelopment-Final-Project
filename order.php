@@ -1,11 +1,5 @@
 <?php
-/**
- * order.php — TRAVELITRIX Order Handler (JSON API)
- * Works with fetch() from any origin (GitHub Pages, local file, localhost).
- * Web Development Fundamentals | A.Y. 2025-2026
- */
 
-/* ── CORS headers — MUST be first, before any output ── */
 header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST, OPTIONS');
