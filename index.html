@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRAVELITRIX — The World on Your Wrist</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/custom.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#">TRAVELITRIX</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto gap-2 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="#specs">Specs</a></li>
+          <li class="nav-item">
+            <a class="nav-link btn-green px-3" href="#" data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container">
+      <div class="row align-items-center min-vh-100 py-5">
+        <div class="col-lg-6">
+          <p class="tag-label">CLASSIFIED · SERIES X-01</p>
+          <h1>Every Country.<br><span class="green">One Slam.</span></h1>
+          <p class="lead-text">
+            The <strong>TRAVELITRIX</strong> doesn't just show you the world — it <em>throws</em> you into it.
+            Dial your destination. Slam the face. Vanish.
+          </p>
+          <p class="coord-text" id="coordDisplay">48.8566° N, 2.3522° E &nbsp;·&nbsp; PARIS</p>
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <a href="#how-it-works" class="btn-green px-4 py-2">See How It Works</a>
+            <a href="#destinations" class="btn-ghost px-4 py-2">Explore Destinations</a>
+          </div>
+        </div>
+        <div class="col-lg-6 d-flex justify-content-center mt-5 mt-lg-0">
+          <div class="watch-wrap">
+
+            <!-- Product image — click to cycle destination -->
+            <div class="product-img-wrap">
+              <img
+                src="images\watch.png"
+                alt="TRAVELITRIX Series X-01 Watch"
+                class="product-img"
+                id="omnitrixImg"
+              />
+              <div class="product-img-label">TRAVELITRIX · SERIES X-01</div>
+            </div>
+
+            <!-- Holo destination overlay -->
+            <div class="watch-holo-overlay" id="watchFace">
+              <div class="watch-dest" id="holoText">🗼 PARIS</div>
+              <div class="watch-latlng">
+                <span id="watchLat">48.8566°N</span>
+                <span id="watchLng">2.3522°E</span>
+              </div>
+            </div>
+
+            <p class="watch-hint">Click watch to change destination</p>
+            <button class="slam-btn" id="slamBtn">SLAM</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works" class="section-pad">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="tag-label">Mechanism</p>
+        <h2>How the TRAVELITRIX Works</h2>
+        <p class="sub-text">Three steps. Infinite destinations.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="info-card">
+            <i class="bi bi-vinyl-fill card-icon"></i>
+            <p class="step-num">01</p>
+            <h5>Dial the Destination</h5>
+            <p>Rotate the holographic bezel. A 3D projection shows the country flag and GPS coordinates. The watch knows 195 nations.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info-card">
+            <i class="bi bi-hand-index-fill card-icon"></i>
+            <p class="step-num">02</p>
+            <h5>Slam the Face</h5>
+            <p>Press down hard. The haptic feedback sends a shockwave up your arm. Your coordinates are locked. This is a <em>commitment</em>.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info-card">
+            <i class="bi bi-lightning-charge-fill card-icon"></i>
+            <p class="step-num">03</p>
+            <h5>Vanish in a Burst</h5>
+            <p>You dissolve in localized weather — Saharan heat, Swiss snow, Tokyo cherry blossoms. One heartbeat later, you're there. No passport.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTINATIONS -->
+  <section id="destinations" class="section-pad section-alt">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="tag-label">Destinations</p>
+        <h2>Featured Teleport Locations</h2>
+        <p class="sub-text">Pre-loaded into every unit at launch. Click a photo to explore.</p>
+      </div>
+      <div class="row g-4">
+
+        <!-- Paris -->
+        <div class="col-md-4">
+          <div class="dest-card">
+            <a href="https://www.france.fr/en/paris" target="_blank" class="dest-img-link" title="Explore Paris, France">
+              <img
+                src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80"
+                alt="Eiffel Tower, Paris"
+                class="dest-photo"
+              />
+              <div class="dest-img-overlay">
+                <i class="bi bi-box-arrow-up-right"></i> Explore Paris
+              </div>
+            </a>
+            <div class="dest-body">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span>🇫🇷</span>
+                <span class="region-badge">EUROPE</span>
+              </div>
+              <h5>Paris, France</h5>
+              <p>Arrive at the iconic Eiffel Tower in warm Parisian air. The City of Light and Love, always on demand.</p>
+              <p class="effect-text"><i class="bi bi-wind"></i> <em>warm baguette-scented breeze</em></p>
+              <a href="#" class="btn-outline-green mt-2" data-dest="PARIS" onclick="setDestination(this)">Set as Target</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tokyo -->
+        <div class="col-md-4">
+          <div class="dest-card">
+            <a href="https://www.gotokyo.org/en/" target="_blank" class="dest-img-link" title="Explore Tokyo, Japan">
+              <img
+                src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&q=80"
+                alt="Tokyo skyline at night"
+                class="dest-photo"
+              />
+              <div class="dest-img-overlay">
+                <i class="bi bi-box-arrow-up-right"></i> Explore Tokyo
+              </div>
+            </a>
+            <div class="dest-body">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span>🇯🇵</span>
+                <span class="region-badge">ASIA</span>
+              </div>
+              <h5>Tokyo, Japan</h5>
+              <p>Materialize in Shibuya Crossing. Cherry blossoms announce your arrival. Welcome to the future.</p>
+              <p class="effect-text"><i class="bi bi-flower1"></i> <em>cherry blossom petals</em></p>
+              <a href="#" class="btn-outline-green mt-2" data-dest="TOKYO" onclick="setDestination(this)">Set as Target</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Swiss Alps -->
+        <div class="col-md-4">
+          <div class="dest-card">
+            <a href="https://www.myswitzerland.com/en-us/experiences/summer-autumn/alps/" target="_blank" class="dest-img-link" title="Explore Swiss Alps">
+              <img
+                src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=600&q=80"
+                alt="Swiss Alps mountains"
+                class="dest-photo"
+              />
+              <div class="dest-img-overlay">
+                <i class="bi bi-box-arrow-up-right"></i> Explore Swiss Alps
+              </div>
+            </a>
+            <div class="dest-body">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span>🇨🇭</span>
+                <span class="region-badge">EUROPE</span>
+              </div>
+              <h5>Swiss Alps, Switzerland</h5>
+              <p>A burst of alpine cold and snowflakes marks your arrival at 3,000 meters. Dress accordingly.</p>
+              <p class="effect-text"><i class="bi bi-snow"></i> <em>localized snowfall burst</em></p>
+              <a href="#" class="btn-outline-green mt-2" data-dest="SWITZERLAND" onclick="setDestination(this)">Set as Target</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECS -->
+  <section id="specs" class="section-pad">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="tag-label">Technical Specs</p>
+        <h2>What's Under the Face</h2>
+      </div>
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-3"><div class="spec-chip"><i class="bi bi-globe-americas"></i><span class="spec-val">195</span><span>Nations Loaded</span></div></div>
+        <div class="col-6 col-md-3"><div class="spec-chip"><i class="bi bi-lightning-charge-fill"></i><span class="spec-val">0.3s</span><span>Teleport Time</span></div></div>
+        <div class="col-6 col-md-3"><div class="spec-chip"><i class="bi bi-card-checklist"></i><span class="spec-val">None</span><span>Passport Required</span></div></div>
+        <div class="col-6 col-md-3"><div class="spec-chip"><i class="bi bi-clock-history"></i><span class="spec-val">0</span><span>Jet Lag (hrs)</span></div></div>
+        <div class="col-6 col-md-3"><div class="spec-chip"><i class="bi bi-broadcast"></i><span class="spec-val">3D</span><span>Hologram Type</span></div></div>
+        <div class="col-6 col-md-3"><div class="spec-chip"><i class="bi bi-infinity"></i><span class="spec-val">∞</span><span>Range (km)</span></div></div>
+        <!-- NEW SPECS -->
+        <div class="col-6 col-md-3"><div class="spec-chip"><i class="bi bi-battery-charging"></i><span class="spec-val">72h</span><span>Battery Life</span></div></div>
+        <div class="col-6 col-md-3"><div class="spec-chip"><i class="bi bi-droplet-fill"></i><span class="spec-val">IP68</span><span>Water Resistance</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER MODAL -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <div>
+            <p class="tag-label mb-1">SECURE ACQUISITION PORTAL</p>
+            <h4 class="modal-title">Order a TRAVELITRIX Unit</h4>
+            <p class="text-muted small">Orders are fulfilled within 3–5 galactic business days.</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+
+          <div id="orderSuccess" class="alert alert-success d-none">
+            <i class="bi bi-check-circle-fill me-2"></i>
+            <strong>Order transmitted.</strong> Your unit is being prepared. Stand by for confirmation.
+          </div>
+
+          <form id="orderForm" action="order.php" method="POST" class="needs-validation" novalidate>
+            <div class="row g-3">
+
+              <!-- Name -->
+              <div class="col-md-6">
+                <label class="form-label">Full Name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" name="name" placeholder="Juan dela Cruz" required />
+                <div class="invalid-feedback">Name is required.</div>
+              </div>
+
+              <!-- Email -->
+              <div class="col-md-6">
+                <label class="form-label">Email Address <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" name="email" placeholder="agent@domain.com" required />
+                <div class="invalid-feedback">Enter a valid email address.</div>
+              </div>
+
+              <!-- Shipping Address -->
+              <div class="col-12">
+                <label class="form-label">Shipping Address <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" name="address" placeholder="123 Main St, City, Country" required />
+                <div class="invalid-feedback">Shipping address is required.</div>
+              </div>
+
+              <!-- Quantity -->
+              <div class="col-md-6">
+                <label class="form-label">Quantity <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" name="quantity" value="1" min="1" max="10" required />
+                <div class="invalid-feedback">Enter a quantity between 1 and 10.</div>
+              </div>
+
+              <!-- Unit Price display -->
+              <div class="col-md-6">
+                <label class="form-label">Unit Price</label>
+                <input type="text" class="form-control" value="$9,999.00" readonly style="opacity:0.6;cursor:not-allowed;" />
+              </div>
+
+              <!-- Payment Method -->
+              <div class="col-md-6">
+                <label class="form-label">Payment Method <span class="text-danger">*</span></label>
+                <select class="form-control" name="payment_method" required>
+                  <option value="" disabled selected>— Select Method —</option>
+                  <option value="Credit Card">Credit Card</option>
+                  <option value="Cryptocurrency">Cryptocurrency</option>
+                  <option value="Bank Transfer">Bank Transfer</option>
+                  <option value="Classified Agency Funds">Classified Agency Funds</option>
+                </select>
+                <div class="invalid-feedback">Please select a payment method.</div>
+              </div>
+
+              <!-- Order Notes -->
+              <div class="col-12">
+                <label class="form-label">Special Instructions <span class="text-muted small">(optional)</span></label>
+                <textarea class="form-control" name="notes" rows="3" placeholder="Any special delivery instructions, engraving requests, etc."></textarea>
+              </div>
+
+            </div>
+
+            <!-- Order Summary -->
+            <div class="order-summary mt-3">
+              <div class="d-flex justify-content-between">
+                <span class="summary-label">Subtotal</span>
+                <span class="summary-val" id="summarySubtotal">$9,999.00</span>
+              </div>
+              <div class="d-flex justify-content-between">
+                <span class="summary-label">Teleport Tax</span>
+                <span class="summary-val">$0.00</span>
+              </div>
+              <div class="d-flex justify-content-between summary-total">
+                <span>TOTAL</span>
+                <span id="summaryTotal">$9,999.00</span>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-end gap-2 mt-4">
+              <button type="button" class="btn-ghost px-4 py-2" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn-green px-4 py-2">
+                <i class="bi bi-bag-check-fill me-2"></i>Place Order
+              </button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row align-items-center gy-3">
+        <div class="col-md-4 text-center text-md-start">
+          <span class="footer-brand">TRAVELITRIX</span>
+          <span class="footer-series">SERIES X-01</span>
+        </div>
+        <div class="col-md-4 text-center">
+          <p class="small text-muted mb-0">Web Development Fundamentals · A.Y. 2025–2026</p>
+          <p class="small text-muted mb-0">Your Name Here</p>
+        </div>
+        <div class="col-md-4 text-center text-md-end">
+          <a href="https://your-username.github.io/travelitrix" target="_blank" class="footer-link">
+            <i class="bi bi-github me-1"></i>GitHub Pages
+          </a>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <p class="text-center small text-muted mb-0">
+        &copy; 2026 TRAVELITRIX Corp. Teleportation is fictional. Side effects may include mild snowfall and existential wonder.
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/validation.js"></script>
+</body>
+</html>
